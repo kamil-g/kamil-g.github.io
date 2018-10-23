@@ -1,71 +1,43 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title> Informacje </title>
-	<link rel="stylesheet" type="text/css"	href="style.css">
-	</style>
-</head>
-<body>
-	<div id="body">
-		<div id="menu">
-				<div class="kom">
-					<h1><a href="index.html">Strona Główna</a></h1>
-				</div>
-				
-				<div class="kom2">
-					<h1>
-						<ol>
-							<li> Menu <br>
-								<ul>
-									<li><a href="https://www.youtube.com/">Youtube</a></li>
-									<li><a href="https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna">Wikipedia</a></li>
-									<li><a href="https://fortnitepolska.pl/">Fortnite</a></li>
-								</ul>
-							</li>			
-						</ol>
-					</h1>
-				</div>
-				
-				<div class="komx">
-				<a href="https://twitch.tv/bandytatv"><img src="bandytatv.jpg" height="100%"></a>
-				</div>
-				
-				<div class="kom">
-					<h1><a href="php.php">PHP</a></h1>
-				</div>
-				
-				<div class="kom">
-					<h1><a href="info.html">Informacje</a></h1>
-				</div>
-			
+	<head>
+		<meta charset="utf-8">
+		<title> Informacje </title>
+		<link rel="shortcut icon" href="icon.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css"	href="style.css">
+	</head>
+	<body>
+
+		<div class="topnav" id="myTopnav">
+			<a href="index.html">Strona Główna</a>
+			 <a href="#contact">Kontakt</a>
+			 <a href="info.html" class="active">Informacje</a>
+			 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+			</a>
 		</div>
-	<div>
-	<div id="placeholder"></div>
-	<div id="main">
-		<h3>INFORMACJE</h3>
-		<h4>
-		<table id="info">
-			<tr>
-				<th>Początek pracy nad stroną:</th>
-				<th> 09.10.2018 </th>
-			</tr>
-			<tr>
-				<th>Cel:</th>
-				<th> HTML i CSS </th>
-			</tr>
-			<tr>
-				<th>Notatki:</th>
-				<th> Menu przesuwa całą zawartość strony. </th>
-			</tr>
-		</table>
-		</h4>
-	</div>
-	
-	<div id="bottombar">
-		<h2> V.1.9.10.2018 </h2>
-	</div>
 
+		<div style="padding-left:16px">
+		</div>
 
-</body>
+		<div class="content">
+			<div class="content-inside">
+			Informacje:
+			</div>
+		</div>
+		<footer class="footer">Xd</footer>
+		
+			<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+		</script>
+	</body>
 </html>
