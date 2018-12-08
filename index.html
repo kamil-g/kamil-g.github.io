@@ -1,79 +1,101 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title> Strona o niczym </title>
-		<link rel="shortcut icon" href="icon.png"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css"	href="style.css">
-	</head>
-	<body>
-	
-		<button onclick="topFunction()" id="myBtn" title="W górę">Powrót </button> 
-		
-		<div class="topnav" id="myTopnav">
-			<a href="index.html" class="active">Strona Główna</a>
-			 <a href="#contact">Kontakt</a>
-			 <a href="info.html">Informacje</a>
-			 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-			</a>
-		</div>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fast Fingers</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <article class="box">
+            <span class="players">
+            <span class="info">Player #1</span>
+            <span class="info">Player #2</span>
+            </span> 
+            <section class="bar">                       
+                <div class="player1"></div>
+                <div class="player2"></div>
+            </section>
+            <section class="start">
+                <span class="starter">START</span>
+            </section>
+            <section class="controlsText">
+                <span>Player 1: z,x
+                Player 2: n,m</span>
+            </section>
+            <section class="controls">
+                <b>
+                <span class="controlButton" id="btn1">Z</span>
+                <span class="controlButton" id="btn2">X</span>
+                <span class="spacer"></span>
+                <span class="controlButton" id="btn3">N</span>
+                <span class="controlButton" id="btn4">M</span>
+                </b>
+            </section>
+        </article>
+        <script>
+            
+            var countToStart = [3,2,1];
+            var go = "GO!";
+            var gameStarted = false;
+            var barFullnessP1 = 50;
+            var barFullnessP2 = 50;
+            var keys = [122, 120, 110, 109];
+    
+            document.querySelector(".start").addEventListener("click", function(){
+                if (gameStarted == false){
+                document.querySelector(".start").style.backgroundColor = "orange";
+                setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[0]; },)
+                setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[1]; }, 1000)
+                setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[2]; }, 2000)
+                setTimeout (function(){document.querySelector(".starter").innerHTML = go; }, 3000)
+                setTimeout (function(){document.querySelector(".start").style.backgroundColor = "red"}, 2950)
+                barFullnessP1 = 50;
+                barFullnessP2 = 50;
+                document.querySelector(".player1").style.width = barFullnessP1 + "%";
+                document.querySelector(".player2").style.width = barFullnessP2 + "%";
+                document.querySelector(".players").innerHTML = '<span class="info">Player #1</span><span class="info">Player #2</span>';
+                setTimeout (function(){gameStarted = true;},3000)
+                }
+            });
+            
+            
+            window.onkeypress = function(event) {
+                if (event.charCode >= 120 && event.charCode <=122) {
+                    if(gameStarted == true){
+                        if(barFullnessP1 < 100){
+                            barFullnessP1 = barFullnessP1 + 5;
+                            barFullnessP2 = barFullnessP2 - 5;
+                            document.querySelector(".player1").style.width = barFullnessP1 + "%";
+                            document.querySelector(".player2").style.width = barFullnessP2 + "%";
+                        }
+                        else {
+                            document.querySelector(".players").innerHTML = '<section class="winner"><p>PLAYER 1 IS WINNER</p></section>';
+                            document.querySelector(".starter").innerHTML = "START";
+                            document.querySelector(".start").style.backgroundColor = "lawngreen";
+                            gameStarted = false;
+                        }
+                    } 
+                }
+                else if (event.charCode >= 109 && event.charCode <=110) {
+                    if(gameStarted == true){
+                        if(barFullnessP2 < 100){
+                            barFullnessP1 = barFullnessP1 - 5;
+                            barFullnessP2 = barFullnessP2 + 5;
+                            document.querySelector(".player1").style.width = barFullnessP1 + "%";
+                            document.querySelector(".player2").style.width = barFullnessP2 + "%";
+                        }
+                        else {
+                            document.querySelector(".players").innerHTML = '<section class="winner"><p>PLAYER 2 IS WINNER</p></section>';
+                            document.querySelector(".starter").innerHTML = "START";
+                            document.querySelector(".start").style.backgroundColor = "lawngreen";
+                            gameStarted = false;
+                        }
+                    } 
+                }
+            };
+            
 
-		<div style="padding-left:16px">
-		</div>
 
-		<div class="content">
-			<div class="content-inside">
-			
-				<div class="galery">
-					<div class="galeryleft"><img src="photo1.jpg"></div>
-					<div class="galeryright"><h2>Opis obrazka</h2><h3>To jest opis.</h3></div>
-				</div>
-				
-				<div class="galery">
-					<div class="galeryright"><img src="photo2.jpg"></div>
-					<div class="galeryleft"><h2>Opis obrazka</h2><h3>To jest opis.</h3></div>
-				</div>
-				
-				<div class="galery">
-					<div class="galeryleft"><img src="photo3.jpg"></div>
-					<div class="galeryright"><h2>Opis obrazka</h2><h3>To jest opis.</h3></div>
-				</div>
-							
-			</div>
-		</div>
-		<footer class="footer">
-		</footer>
-		
-			<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
-			}
-		}
-		</script>
-	
-		<script>
-		
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				document.getElementById("myBtn").style.display = "block";
-			} else {
-				document.getElementById("myBtn").style.display = "none";
-			}
-		}
-
-		function topFunction() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-		</script>
-	</body>
+        </script> 
+    </body>
 </html>
