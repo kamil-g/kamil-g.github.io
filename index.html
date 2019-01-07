@@ -42,7 +42,7 @@
             var keys = [122, 120, 110, 109];
     
             document.querySelector(".start").addEventListener("click", function(){
-                if (gameStarted == false){
+                if (gameStarted){
                 document.querySelector(".start").style.backgroundColor = "orange";
                 setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[0]; },)
                 setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[1]; }, 1000)
