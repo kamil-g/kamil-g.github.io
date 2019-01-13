@@ -45,7 +45,7 @@ function bg1(){
 function bg2(){
     $(document.body).fadeOut();
     $(document.body).fadeTo("fast", 1, function(){
-        $(document.body).css("background", "url('images/home.jpg')");
+        $(document.body).css("background", "url('images/myprojects.jpg')");
     });
     $(document.body).fadeIn();   
 }
