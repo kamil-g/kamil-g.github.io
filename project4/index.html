@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIMaster</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+</head>
+<body>
+    <section class="lobby"></section>
+    <button>Master your aim!</button>
+    
+    <section class="gameWindow">
+        <div class="object" id="no01"></div>
+        <div class="object" id="no02"></div>
+        <div class="object" id="no03"></div>
+        <div class="object" id="no04"></div>
+        <div class="object" id="no05"></div>
+        <div class="object" id="no06"></div>
+        <div class="object" id="no07"></div>
+        <div class="object" id="no08"></div>
+        <div class="object" id="no09"></div>
+        <div class="object" id="no010"></div>
+        <div class="object" id="no011"></div>
+        <div class="object" id="no012"></div>
+        <div class="object" id="no013"></div>
+        <div class="object" id="no014"></div>
+        <div class="object" id="no015"></div>
+        <div class="object" id="no016"></div>
+        <div class="object" id="no017"></div>
+        <div class="object" id="no018"></div>
+        <div class="object" id="no019"></div>
+        <div class="object" id="no020"></div>
+        <div class="object" id="no021"></div>
+        <div class="object" id="no022"></div>
+        <div class="object" id="no023"></div>
+        <div class="object" id="no024"></div>
+        <div class="object" id="no025"></div>
+        <div class="object" id="no026"></div>
+        <div class="object" id="no027"></div>
+        <div class="object" id="no028"></div>
+        <div class="object" id="no029"></div>
+        <div class="object" id="no030"></div>
+        <div class="object" id="no031"></div>
+        <div class="object" id="no032"></div>
+        <div class="object" id="no033"></div>
+        <div class="object" id="no034"></div>
+        <div class="object" id="no035"></div>
+        <div class="object" id="no036"></div>
+        <div class="object" id="no037"></div>
+        <div class="object" id="no038"></div>
+        <div class="object" id="no039"></div>
+        <div class="object" id="no040"></div>
+        <div class="object" id="no041"></div>
+        <div class="object" id="no042"></div>
+        <div class="object" id="no043"></div>
+        <div class="object" id="no044"></div>
+        <div class="object" id="no045"></div>
+        <div class="object" id="no046"></div>
+        <div class="object" id="no047"></div>
+        <div class="object" id="no048"></div>
+        <div class="object" id="no049"></div>
+        <div class="object" id="no050"></div>
+    </section>
+    
+    <script>
+        //lobby screen hiding
+        document.querySelector("button").addEventListener("click", function(){
+            document.querySelector(".lobby").style.transform = "scaleY(0)";
+            document.querySelector("button").style.transform = "scaleY(0)";
+        });
+        
+        //initial circle / starting game
+
+        document.querySelector("button").addEventListener("click", createObject);
+        
+        //variables
+        var object = document.getElementById("no0" + Math.floor(Math.random()*49+1));
+        var initial = object.addEventListener("click", clickObject);
+        
+        //new random nr
+        function generateNumber(){
+            object = document.getElementById("no0" + Math.floor(Math.random()*49+1));
+            initial = object.addEventListener("click", clickObject);
+        }
+        
+        //create circle
+        function createObject(){
+            object.style.backgroundColor = "crimson";
+        }
+        
+        //clicking circles
+        function clickObject(){
+            object.removeEventListener("click", clickObject);
+            object.style.backgroundColor = "darkslategray";
+            generateNumber();
+            createObject();
+        } 
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fast Fingers</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <article class="box">
+            <span class="players">
+            <span class="info">Player #1</span>
+            <span class="info">Player #2</span>
+            </span> 
+            <section class="bar">                       
+                <div class="player1"></div>
+                <div class="player2"></div>
+            </section>
+            <section class="start">
+                <span class="starter">START</span>
+            </section>
+            <section class="controlsText">
+                <span>Player 1: z,x
+                Player 2: n,m</span>
+            </section>
+            <section class="controls">
+                <b>
+                <span class="controlButton" id="btn1">Z</span>
+                <span class="controlButton" id="btn2">X</span>
+                <span class="spacer"></span>
+                <span class="controlButton" id="btn3">N</span>
+                <span class="controlButton" id="btn4">M</span>
+                </b>
+            </section>
+        </article>
+        <script>
+            
+            var countToStart = [3,2,1];
+            var go = "GO!";
+            var gameStarted = false;
+            var barFullnessP1 = 50;
+            var barFullnessP2 = 50;
+            var keys = [122, 120, 110, 109];
+            var counting = false;
+            
+            document.querySelector(".start").addEventListener("click", function(){
+                if (counting == false){
+                    if (gameStarted == false){
+                    setTimeout (function(){counting = true;},0)
+                    document.querySelector(".start").style.backgroundColor = "orange";
+                    setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[0]; },)
+                    setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[1]; }, 1000)
+                    setTimeout (function(){document.querySelector(".starter").innerHTML = countToStart[2]; }, 2000)
+                    setTimeout (function(){document.querySelector(".starter").innerHTML = go; }, 3000)
+                    setTimeout (function(){document.querySelector(".start").style.backgroundColor = "red"}, 2950)
+                    barFullnessP1 = 50;
+                    barFullnessP2 = 50;
+                    document.querySelector(".player1").style.width = barFullnessP1 + "%";
+                    document.querySelector(".player2").style.width = barFullnessP2 + "%";
+                    document.querySelector(".players").innerHTML = '<span class="info">Player #1</span><span class="info">Player #2</span>';
+                    setTimeout (function(){gameStarted = true;},3000)
+                    setTimeout (function(){counting = false;},3000)
+                    }
+                }
+            });
+            
+            
+            window.onkeypress = function(event) {
+                if (event.charCode >= 120 && event.charCode <=122) {
+                    if(gameStarted == true){
+                        if(barFullnessP1 < 100){
+                            barFullnessP1 = barFullnessP1 + 5;
+                            barFullnessP2 = barFullnessP2 - 5;
+                            document.querySelector(".player1").style.width = barFullnessP1 + "%";
+                            document.querySelector(".player2").style.width = barFullnessP2 + "%";
+                        }
+                        else {
+                            document.querySelector(".players").innerHTML = '<section class="winner"><p>PLAYER 1 IS WINNER</p></section>';
+                            document.querySelector(".starter").innerHTML = "START";
+                            document.querySelector(".start").style.backgroundColor = "lawngreen";
+                            gameStarted = false;
+                        }
+                    } 
+                }
+                else if (event.charCode >= 109 && event.charCode <=110) {
+                    if(gameStarted == true){
+                        if(barFullnessP2 < 100){
+                            barFullnessP1 = barFullnessP1 - 5;
+                            barFullnessP2 = barFullnessP2 + 5;
+                            document.querySelector(".player1").style.width = barFullnessP1 + "%";
+                            document.querySelector(".player2").style.width = barFullnessP2 + "%";
+                        }
+                        else {
+                            document.querySelector(".players").innerHTML = '<section class="winner"><p>PLAYER 2 IS WINNER</p></section>';
+                            document.querySelector(".starter").innerHTML = "START";
+                            document.querySelector(".start").style.backgroundColor = "lawngreen";
+                            gameStarted = false;
+                        }
+                    } 
+                }
+            };
+            
+
+
+        </script> 
+    </body>
+</html>

@@ -1,0 +1,116 @@
+
+            html, body{
+                background-color: rgb(40,40,40);
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+            }
+            
+            .box{
+                background-color: rgb(100,100,100);
+                width: 50vw;
+                height: 50vh;
+                position: absolute;
+                left: 25vw;
+                top: 25vh;
+                border-radius: 20px;
+                box-shadow: 50px solid black;
+            }
+            
+            .bar{
+                background-color: dimgray;
+                height: 10%;
+                width: 80%;
+                position: absolute;
+                left: 10%;
+                top: 20%;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            
+            .player1{
+                background-color: aqua;
+                height: 100%;
+                width: 50%;
+                float: left;
+            }
+            
+            .player2{
+                background-color: crimson;
+                height: 100%;
+                width: 50%;
+                float: right;
+            }
+            
+            .info{
+                display: inline-block;
+                margin-left: 25%;
+                margin-top: 40px;
+                font-size: 30px;
+            }
+            
+                          
+            .start{
+                position: absolute;
+                top: 45%;
+                left: 42%;
+                width: 100px;
+                height: 50px;
+                text-align: center;
+                padding-top: 30px;
+                background-color: lawngreen;
+                border-radius: 10px;
+                transition: .2s;
+                opacity: .8;
+
+            }
+            
+             .start:hover{
+                transform: scale(1.1);
+                opacity: 1;
+                cursor: pointer;
+            }
+            
+            .controls{
+                position: absolute;
+                display: inline-block;
+                bottom: 50px;
+                left: 23%;
+            }
+            
+            .controlButton{
+                background-color: white;
+                display: inline-block;
+                font-size: 30px;
+                padding: 20px;
+                border-radius:10px;
+                margin-left: 10px;
+                opacity: .75;
+            }
+            
+            #btn1{padding-left: 22px ;padding-right: 22px;}
+            #btn3{padding-left: 25px ;padding-right: 25px;}
+            
+            .spacer{margin-left:170px;}
+
+            .players{text-align: center;}
+
+            .winner{font-size:30px;}
+
+            .controlsText{
+                display: none;
+                position: absolute;
+                bottom: 50px;
+                left: 36%;
+            }
+            
+            @media only screen and (max-width: 1300px){
+                .controls{display: none}
+                .controlsText{display: block}
+            }
+
+
+
+
+
