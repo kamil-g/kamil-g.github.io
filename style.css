@@ -21,14 +21,14 @@ html, body {
 @media only screen and (max-width: 1440px) {
     
     html, body {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 1024px) {
     
     html, body {
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
@@ -65,6 +65,26 @@ topnav {
     width: 90vw;
     margin-left: 5vw;
     display: block;
+}
+
+.motto1{
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+    background-color: rgba(255,255,255,.5);
+    color: black;
+    transform: skewY(3deg);
+    font-size: 3rem;
+}
+
+.motto2{
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    transform: skewY(3deg);
+    font-size: 3rem;
 }
 
 #contactContent{
@@ -104,6 +124,19 @@ topnav {
     width: auto;
 }
 
+.info{
+    font-size: 1.5rem;
+}
+
+.info a{
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+.info:hover{
+    color: dimgrey;
+}
 
 
 
