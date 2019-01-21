@@ -1,0 +1,77 @@
+html, body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.clockFace{
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    border: 3px solid gray;
+    background-color: black;
+    margin-top: 30vh;
+    transform: scale(1)
+}
+
+#leftSection{
+    width: 200px;
+    height: 100%;
+    float: left;
+    border-right: 3px solid gray;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#centralSection{
+    width: 197px;
+    height: 100%;
+    float: left;
+    border-right: 3px solid gray;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#rightSection{
+    width: 197px;
+    height: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.led {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border: 3px solid gray; 
+    border-radius: 50%;
+    margin: auto;
+    font-size: 20px;
+}
+
+#s0c0{border: none}
+#m0c0{border: none}
+#h0c0{border: none}
+#h0c1{border: none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
