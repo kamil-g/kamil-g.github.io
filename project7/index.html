@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dream Life Cost Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p>
+            <h1>The dream life cost calculator</h1>
+            <h2>it's less than you thought!</h2>
+        </p>
+    </header>
+    <article>
+
+        <section class="box">
+            <input type="text" class="inp" placeholder="e.g. Car, Food, Trip around the world">
+            <input type="number" class="inp2" placeholder="Price: e.g. 1500">
+            <p>
+                <button class="btn" id="oneTime">One-time cost</button>
+                <button class="btn" id="yearly">Yearly cost</button>
+                <button class="btn" id="monthly">Monthly cost</button>
+            </p>
+        </section>
+
+        <section class="box">
+            <div class="listItems" id="oneTimeItems"></div>
+            <div class="listItems" id="yearlyItems"></div>
+            <div class="listItems" id="monthlyItems"></div>
+        </section>
+
+
+        <section class="box" id="final">
+            <div class="calcs" id="settings">
+                <p>How much time do you intend to earn for the biggest expenses?</p>
+                <input type="number" class="inp3" placeholder="e.g. 10">
+                <button class="btn" id="calculate">Calculate</button>
+            </div>
+
+            <div class="calcs" id="calculated">
+            </div>
+        </section>
+
+    </article>
+
+    <footer></footer>
+    <script src="calc.js"></script>
+</body>
+
+</html>

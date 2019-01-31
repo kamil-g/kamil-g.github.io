@@ -9,6 +9,7 @@ html, body {
     background-color: black;
     background-repeat: no-repeat;
     background-position: center; 
+    background-attachment: fixed;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -65,6 +66,9 @@ topnav {
     width: 90vw;
     margin-left: 5vw;
     display: block;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: fixed;
 }
 
 .motto1{
@@ -89,6 +93,7 @@ topnav {
 
 #contactContent{
     text-align: center;
+    
 }
 
 .project{
@@ -137,8 +142,6 @@ topnav {
 .info:hover{
     color: dimgrey;
 }
-
-
 
 
 
