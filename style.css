@@ -10,6 +10,7 @@ html, body {
     background-repeat: no-repeat;
     background-position: center; 
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -99,8 +100,8 @@ topnav {
 .project{
     height: 12vh;
     width: 100%;
-    margin-bottom: 5vh;
-    font-size: 1.5rem;
+    margin-bottom: 3vh;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -139,7 +140,7 @@ topnav {
     transition: .2s;
 }
 
-.info:hover{
+.info:hover :not:first-child{
     color: dimgrey;
 }
 
