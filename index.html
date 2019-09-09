@@ -2,83 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="graphics/icon.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <title>Kamil Gut</title>
 </head>
-<body>
+<body>  
     <topnav>
-       
-        <div class="tni"><span class="topnavItems" id="home">home</span></div>
-        <div class="tni"><span class="topnavItems" id="myprojects">my projects</span></div>
-        <div class="tni"><span class="topnavItems" id="aboutme">about me</span></div>
-        <div class="tni"><span class="topnavItems" id="contact">contact</span></div>
-        
+        <div id="nav">
+            <div id="logo-image">
+                <img src="graphics/logo.png" alt="logo">
+                <div id="logo-name">
+                    <span id="name">KAMIL GUT</span>
+                    <br>
+                    <span id="title">WEBDEVELOPER</span>
+                </div>
+            </div>
+
+            <div id="links">
+                <span class="navLinks" id="homeLink">Home</span>
+                <span class="navLinks" id="aboutLink">About me</span>
+                <span class="navLinks" id="projectsLink">Projects</span>
+                <span class="navLinks" id="contactLink">Contact</span>
+            </div>
+
+            <div id="language">
+                <span id="pl">PL</span>
+                <span id="en">EN</span>
+            </div>
+        </div>
+    
+        <div id="home">
+            <div id="motto">
+                <h1>Hello. My name is Kamil. I'm webdeveloper.</h1>
+            </div>
+        </div>
     </topnav>
-    
-    <!-- pushing content --><section class="push"></section>
-    
-    <section class="content" id="homeContent">
-        
-        <span class="motto1">working</span>
-        <span class="motto2">on</span>
-        
+
+    <section id="about">
+
     </section>
-    
-    <section class="content" id="myprojectsContent">
 
-        <div class="project">
-            <a target="_blank" href="https://starb0i.github.io/">personal website for a musician</a>
-            <p> guitarist portfolio page made based on the provided graphic design.</p>
-        </div>
-		
-		<div class="project">
-            <a target="_blank" href="https://kamil-g.github.io/KeyPositionLearning/">key position learning app</a>
-            <p>app designed as a game that help you remember keys positions on the keyboard </p>
-        </div>
-
-        <div class="project">  
-            <a target="_blank" href="project7/index.html">dream life cost calculator</a>
-            <p>calculate cost of your dream life.</p>
-        </div>
-       
-        <div class="project">  
-            <a target="_blank" href="project6/index.html">binary clock</a>
-            <p>a binary clock written in pure javascript.</p>
-        </div>
+    <section id="projects">
+        <div id="projectsGrid">
+            <div class="box" id="b0">
+                <img src="graphics/website0.png" alt="projectPreview">
+                <button class="boxBtn" id="bb0">Live View</button>
+            </div>
+            <div class="box" id="b1">
+                <img src="graphics/website1.png" alt="projectPreview">
+                <button class="boxBtn" id="bb1"  onclick="openInNewTab('https://starb0i.github.io');">Live View</button>
+            </div>
+            <div class="box" id="b2">
+                <img src="graphics/website3.png" alt="projectPreview">
+                <button class="boxBtn" id="bb2" onclick="openInNewTab('https://kamil-g.github.io/Binary-Clock/');">Live View</button>
+            </div>
+            <div class="box" id="b3">
+                <img src="graphics/website4.png" alt="projectPreview">
+                <button class="boxBtn" id="bb3">Live View</button>
+            </div>
+            <div class="box" id="b4">
+                <img src="graphics/website5.png" alt="projectPreview">
+                <button class="boxBtn" id="bb4" onclick="openInNewTab('https://kamil-g.github.io/AIMaster/');">Live View</button>
+            </div>
+            <div class="box" id="b5">
+                <img src="graphics/website2.png" alt="projectPreview">
+                <button class="boxBtn" id="bb5" onclick="openInNewTab('https://kamil-g.github.io/Dream-Life-Cost-Calculator/');">Live View</button>
+            </div>
+            <div class="box" id="b6">
+                <img src="graphics/soon.png" alt="projectPreview">
                 
-        <div class="project">
-                <a target="_blank" href="https://kamil-g.github.io/Caves-of-Purgatory">rpg arena game</a>
-                <p>old school rpg turn-based game. fight on arena, improve your equipment, learn new skills and dominate oponnents in your own style.</p>
+            </div>
+            <div class="box" id="b7">
+                <img src="graphics/soon.png" alt="projectPreview">
+                
+            </div>
+            <div class="box" id="b8">
+                <img src="graphics/soon.png" alt="projectPreview">
+                
+            </div>
         </div>
-                     
-        <div class="project">
-            <a target="_blank" href="project4/index.html">aimaster</a>
-            <p>improve your aim by clicking the circles.</p>
+        <button id="showMore">Show more</button>
+    </section>
+
+    <section id="contact">
+        <div id="contactTab">
+            <div id="email">
+                <form action="mailto:gutkamil99@gmail.com" method="post" enctype="text/plain">
+                        Name:<br>
+                    <input type="text" name="name" size="50"><br>
+                        E-mail:<br>
+                    <input type="text" name="mail" size="50"><br>
+                        Comment:<br>
+                    <input type="text" name="comment" size="50"><br><br>
+                    <input class="btn" type="submit" value="Send">
+                    <input class="btn" type="reset" value="Reset">
+                </form>   
+            </div>
+            <div id="socials">
+                <p class="info"><i class="far fa-envelope"></i>gutkamil99@gmail.com</p>
+                <p class="info"><a href="https://github.com/kamil-g"><i class="fab fa-github"></i> kamil-g</a></p>
+                <p class="info"><a href="https://www.linkedin.com/in/kamil-gut-42108817b/"><i class="fab fa-linkedin-in"></i>Kamil Gut</a></p>
+            </div>
         </div>
-        
-        <div class="project">
-            <a target="_blank" href="project1/index.html">waifu clicker 2018</a>
-            <p>simple clicker game. earn money to buy waifus. more waifus you got working at your wealth, wealther you becomes.</p>
-        </div>
-        
+        <footer>
+                2019 © Kamil Gut
+        </footer>
     </section>
     
-    <section class="content" id="aboutmeContent">
-x
-    </section>
-    
-    <section class="content" id="contactContent">
-       
-        <p class="info"><i class="far fa-envelope"></i> gutkamil99@gmail.com</p>
-        <p class="info"><i class="fab fa-github"></i> <a href="https://github.com/kamil-g">kamil-g</a></p>
-        <p class="info"><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/kamil-gut-42108817b/">kamil gut</a></p>
-        
-    </section>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="navigation.js"></script>
-    <script src="bg.js"></script>
+    <script src="script.js"></script>
+
+
 </body>
 </html>

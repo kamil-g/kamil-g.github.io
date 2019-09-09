@@ -1,169 +1,335 @@
-html, body {
-    height: 100vh;
-    width: 100vw;
+html, body
+{
+    background: linear-gradient(to right, rgba(215, 215, 215, 1), rgba(240, 240, 240, 1), rgba(215, 215, 215, 1));
     margin: 0;
     padding: 0;
-    font-family: 'Major Mono Display', monospace;
-    color: white;
-    font-size: 20px;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-attachment: fixed;
-    overflow: hidden;
-    
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-@media only screen and (max-width: 1920px) {
-    
-    html, body {
-        font-size: 22px;
-    }
+::-webkit-scrollbar 
+{
+    width: 7px;
+}
+  
+::-webkit-scrollbar-track 
+{
+    background:rgba(215, 215, 215); 
+}
+   
+::-webkit-scrollbar-thumb 
+{
+    background: rgba(25, 25, 25); 
+    height: 70vh;
 }
 
-@media only screen and (max-width: 1440px) {
-    
-    html, body {
-        font-size: 20px;
-    }
+::-webkit-scrollbar-thumb:hover 
+{
+    background: rgba(25, 25, 25); 
 }
 
-@media only screen and (max-width: 1024px) {
-    
-    html, body {
-        font-size: 15px;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    
-    html, body {
-        position: absolute;
-    }
-}
-
-topnav {
-    width: 100vw;
-    height: 2rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-decoration: none;
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 7px;
-}
-
-.topnavItems{
-        cursor: pointer;
-    transition: .1s;
-}
-
-.push{
+topnav
+{
+    height: 70vh;
+    width: 100vw;;
+    background: linear-gradient(rgba(20, 10, 110, 0.9), rgba(40, 10, 80, 0.9)), url("graphics/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     display: block;
-    width: 100vw;
-    height: 3rem;
+    color: rgb(230,230,230);
 }
 
-.content{
-    width: 90vw;
-    margin-left: 5vw;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-attachment: fixed;
-}
-
-.motto1{
-    position: absolute;
-    top: 30vh;
-    left: 30vw;
-    background-color: rgba(255,255,255,.5);
-    color: black;
-    transform: skewY(3deg);
-    font-size: 3rem;
-}
-
-.motto2{
-    position: absolute;
-    top: 40vh;
-    left: 40vw;
-    background-color: rgba(0,0,0,.5);
-    color: white;
-    transform: skewY(3deg);
-    font-size: 3rem;
-}
-
-#contactContent{
-    text-align: center;
-    
-}
-
-.project{
-    height: 12vh;
+#nav
+{
+    position: fixed;
+    height: 10vh;
     width: 100%;
-    margin-bottom: 3vh;
-    font-size: 1rem;
+    display: grid;
+    grid-template-columns: auto auto 10vw;
+    border-bottom: 1px solid rgb(215, 215, 215);
+    transition: .2s;
+    z-index: 2;
+}
+
+#logo-image
+{
+    height: 10vh;
+    width: 100%;
+}
+
+#logo-image img
+{
+    height: 10vh;
+    width: 10vh;
+}
+
+#logo-name
+{
+    top: 1.1vh;
+    position: absolute;
+    left: 10vh;
+    height: 10vh;
+}
+
+#name
+{
+    font-size: 3.5vh;
+    white-space: nowrap;
+}
+
+#title
+{
+    font-size: 2.3vh;
+    color: rgb(130,130,130);
+}
+
+#links
+{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.navLinks
+{
+    font-size: 2.5vw;
+    margin-top: 1vh;
+    cursor: pointer;
     text-align: center;
+    white-space: nowrap;
 }
 
-.project a{
-    text-decoration: none;
-    color: white;
-    margin-left: 20%;
-    margin-right: 20%;
+.navLinks:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    padding-top: 1vh;
+    border-bottom: 0px solid rgb(215, 215, 215);
+    transition: ease-out 0.1s;
 }
 
-.project p{
-    text-decoration: none;
-    color: darkgray;
-    font-size: 1.1rem;
-    margin-left: 20%;
-    margin-right: 20%;
+.navLinks:hover:after {
+    border-bottom: 1px solid rgb(200, 200, 200);
 }
 
-.projectImage{
-    float: left;
+#language
+{
+    margin-top: 3vh;
+    font-size: 2vh;
+}
+
+#pl, #en
+{
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#motto
+{
+    margin-top: 32vh;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+}
+
+#motto h1 
+{
+    position: relative;
+    left: -50%;
+    font-size: 2.5vw;
+    overflow: hidden;
+    border-right: .15em solid rgb(230,230,230);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .20em;
+    animation: 
+        typing 3.5s steps(50, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing 
+{
+    from { width: 0% }
+    to { width: 100% }
+}
+
+@keyframes blink-caret 
+{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(230,230,230); }
+}
+
+#about
+{
+  color: rgb(20,20,20);
+}
+
+#projectsGrid
+{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+}
+
+.box
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(20, 10, 110, 0.9), rgba(40, 10, 80, 0.9));
+    margin: 10%;
+    -webkit-box-shadow: 0px 0px 23px 6px rgba(171,171,171,1);
+    -moz-box-shadow: 0px 0px 23px 6px rgba(171,171,171,1);
+    box-shadow: 0px 0px 23px 6px rgba(171,171,171,1);
+    width: 25vw;
+    overflow: hidden;
+}
+
+.box img
+{
+    width: 25vw;
     height: 100%;
+    transition: .2s;
+    opacity: 0.8;
+    transform: scale(1);
 }
 
-.projectImage img{
+.box .boxBtn
+{
+    position: absolute;
+    display: none;
+    border-radius: 50px;
+    background: none;
+    border: 1px solid rgb(230,230,230);
+    color: rgb(230,230,230);
+    font-size: 2vw;
+    padding: 2rem;
+}
+
+.box .boxBtn:hover
+{
+    background: rgb(230,230,230);;
+    color: rgb(20,20,20);
+    cursor: pointer;
+}
+
+.box:hover img
+{
+    width: 25vw;
     height: 100%;
-    width: auto;
+    opacity: 0.3;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 
-.info{
-    font-size: 1.5rem;
+.box:hover .boxBtn
+{
+    display: block;
 }
 
-.info a{
+#b6{display: none}
+#b7{display: none}
+#b8{display: none}
+
+#showMore
+{
+    position: relative;
+    left: 40vw;
+    width: 18vw;
+    border: 1px solid rgb(30,30,30);
+    border-radius: 50px;
+    font-size: 1.5vw;
+    color: rgb(30,30,30);
+    padding: 1vw;
+    margin-bottom: 6vh;  
+    background: rgba(0,0,0,0)
+}
+
+#showMore:hover
+{
+    cursor: pointer;
+    background: rgb(30,30,30);
+    color: rgb(230,230,230);
+}
+
+
+#contact
+{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    height: 70vh;
+    width: 100vw;
+    background: linear-gradient(rgba(20, 10, 110, 0.9), rgba(40, 10, 80, 0.9)), url("graphics/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgb(230,230,230);
+}
+
+#contactTab
+{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    height: 50vh;
+    width: 100%;
+    border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+#email
+{
+    font-size: 1.5vw;
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#socials
+{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+
+#socials a
+{
     text-decoration: none;
-    color: black;
+    color: rgb(230,230,230);
+}
+
+#socials i
+{
+    margin-right: 1vw;
+}
+
+input
+{
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(230, 230, 230, 0);
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5vw;
+    color:rgb(230, 230, 230);
     transition: .2s;
 }
 
-.info:hover{
-    color: dimgrey;
+.btn:hover
+{
+    background: rgb(230,230,230);;
+    color: rgb(20,20,20);
+    cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer
+{
+    text-align: center;
+}
