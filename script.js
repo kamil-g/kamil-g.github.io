@@ -19,7 +19,7 @@ function switchLanguage(lng)
         document.querySelector("#aboutLink").innerHTML = "About me"
         document.querySelector("#projectsLink").innerHTML = "Projects"
         document.querySelector("#contactLink").innerHTML = "Contact"
-        document.querySelector("#motto").innerHTML =  "<h1>Hello! My name is Kamil. I'm webdeveloper.</h1>" 
+        document.querySelector("#motto").innerHTML =  "<h1>Hello there, stranger! Make yourself </h1>" 
         document.querySelector("#bb1").innerHTML =  "Live View"
         document.querySelector("#bb2").innerHTML =  "Live View"
         document.querySelector("#bb3").innerHTML =  "Live View"
@@ -27,7 +27,8 @@ function switchLanguage(lng)
         document.querySelector("#bb5").innerHTML =  "Live View"
         document.querySelector("#bb0").innerHTML =  "Live View"
         document.querySelector("#showMore").innerHTML =  "Show more"
-        //document.querySelector("#about").innerHTML = "Hello!"
+        document.querySelector("#technologies").innerHTML =  "Technologies and tools which I use on a daily basis:"
+        document.querySelector("#description").innerHTML = "<p>Hello, my name is Kamil.</p><p>I live in south-eastern Poland. I love technology, creativity and self development.</p>"
     }
     else if (language == "pl")
     {
@@ -35,7 +36,7 @@ function switchLanguage(lng)
         document.querySelector("#aboutLink").innerHTML = "O mnie"
         document.querySelector("#projectsLink").innerHTML = "Projekty"
         document.querySelector("#contactLink").innerHTML = "Kontakt"
-        document.querySelector("#motto").innerHTML =  "<h1>Cześć! Mam na imię Kamil. Jestem webdeveloperem.</h1>" 
+        document.querySelector("#motto").innerHTML =  "<h1>Witaj nieznajomy! Rozgość się </h1>"
         document.querySelector("#bb1").innerHTML =  "Otwórz stronę"
         document.querySelector("#bb2").innerHTML =  "Otwórz stronę"
         document.querySelector("#bb3").innerHTML =  "Otwórz stronę"
@@ -43,13 +44,14 @@ function switchLanguage(lng)
         document.querySelector("#bb5").innerHTML =  "Otwórz stronę"
         document.querySelector("#bb0").innerHTML =  "Otwórz stronę"
         document.querySelector("#showMore").innerHTML =  "Pokaż więcej"
-        //document.querySelector("#about").innerHTML = "Witam!"
+        document.querySelector("#technologies").innerHTML =  "Technologie i narzędzia z których korzystam:"
+        document.querySelector("#description").innerHTML = "<p>Cześć, mam na imię Kamil</p><p>Mieszkam w południowo-wschodniej części Polski. Uwielbiam technologię, twórczość i rozwój.</p>"
     }
 }
 
 document.querySelector("#homeLink").addEventListener("click", function(){ navi("topnav") });
-document.querySelector("#aboutLink").addEventListener("click", function(){ navi("#about") });
-document.querySelector("#projectsLink").addEventListener("click", function(){ navi("#projects") });
+document.querySelector("#aboutLink").addEventListener("click", function(){ navi("#toAbout") });
+document.querySelector("#projectsLink").addEventListener("click", function(){ navi("#toProjects") });
 document.querySelector("#contactLink").addEventListener("click", function(){ navi("#contact") });
 
 function navi(x)
@@ -86,4 +88,23 @@ document.querySelector("#showMore").addEventListener("click", function(){
 function openInNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
-  }
+}
+
+let totallyNecessaryVariable = 5;
+
+document.querySelector("topnav").addEventListener("click", function(){
+    totallyNecessaryFunction();
+});
+
+function totallyNecessaryFunction()
+{
+    if(totallyNecessaryVariable != 0)
+    {
+        totallyNecessaryVariable--;
+    }
+    else
+    {
+        document.querySelector("topnav").style.background = "linear-gradient(rgba(20, 10, 110, 0.9), rgba(40, 10, 80, 0.9)), url('graphics/smile.jpg') no-repeat center center fixed";
+        document.querySelector("#motto").innerHTML =  "<h1>^^</h1>"
+    }
+}

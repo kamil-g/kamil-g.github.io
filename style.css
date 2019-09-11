@@ -130,7 +130,7 @@ topnav
 
 #motto
 {
-    margin-top: 32vh;
+    margin-top: 35vh;
     display: inline-block;
     position: absolute;
     left: 50%;
@@ -165,7 +165,32 @@ topnav
 
 #about
 {
-  color: rgb(20,20,20);
+    color: rgb(30,30,30);
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#icons
+{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-left: 25vw;
+    font-size: 2.5vw;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+}
+
+.bigText
+{
+    font-size: 3vw;
+    font-weight: 900;
+    color: rgb(130,130,130);
+    text-align: center;
+    width: 100vw;
+    display: block;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 #projectsGrid
