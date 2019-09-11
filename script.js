@@ -19,7 +19,7 @@ function switchLanguage(lng)
         document.querySelector("#aboutLink").innerHTML = "About me"
         document.querySelector("#projectsLink").innerHTML = "Projects"
         document.querySelector("#contactLink").innerHTML = "Contact"
-        document.querySelector("#motto").innerHTML =  "<h1>Hello there, stranger! Make yourself </h1>" 
+        document.querySelector("#motto").innerHTML =  "<h1>Looking for a web developer? Here I am!</h1>" 
         document.querySelector("#bb1").innerHTML =  "Live View"
         document.querySelector("#bb2").innerHTML =  "Live View"
         document.querySelector("#bb3").innerHTML =  "Live View"
@@ -29,6 +29,8 @@ function switchLanguage(lng)
         document.querySelector("#showMore").innerHTML =  "Show more"
         document.querySelector("#technologies").innerHTML =  "Technologies and tools which I use on a daily basis:"
         document.querySelector("#description").innerHTML = "<p>Hello, my name is Kamil.</p><p>I live in south-eastern Poland. I love technology, creativity and self development.</p>"
+        document.querySelector("#toAbout").innerHTML =  "About me"
+        document.querySelector("#toProjects").innerHTML =  "My projects"
     }
     else if (language == "pl")
     {
@@ -36,7 +38,7 @@ function switchLanguage(lng)
         document.querySelector("#aboutLink").innerHTML = "O mnie"
         document.querySelector("#projectsLink").innerHTML = "Projekty"
         document.querySelector("#contactLink").innerHTML = "Kontakt"
-        document.querySelector("#motto").innerHTML =  "<h1>Witaj nieznajomy! Rozgość się </h1>"
+        document.querySelector("#motto").innerHTML =  "<h1>Szukasz web developera? Jestem tutaj!</h1>"
         document.querySelector("#bb1").innerHTML =  "Otwórz stronę"
         document.querySelector("#bb2").innerHTML =  "Otwórz stronę"
         document.querySelector("#bb3").innerHTML =  "Otwórz stronę"
@@ -46,6 +48,8 @@ function switchLanguage(lng)
         document.querySelector("#showMore").innerHTML =  "Pokaż więcej"
         document.querySelector("#technologies").innerHTML =  "Technologie i narzędzia z których korzystam:"
         document.querySelector("#description").innerHTML = "<p>Cześć, mam na imię Kamil</p><p>Mieszkam w południowo-wschodniej części Polski. Uwielbiam technologię, twórczość i rozwój.</p>"
+        document.querySelector("#toAbout").innerHTML =  "O mnie"
+        document.querySelector("#toProjects").innerHTML =  "Moje projekty"
     }
 }
 
@@ -90,9 +94,9 @@ function openInNewTab(url) {
     win.focus();
 }
 
-let totallyNecessaryVariable = 5;
+let totallyNecessaryVariable = 4;
 
-document.querySelector("topnav").addEventListener("click", function(){
+document.querySelector("#logo-image").addEventListener("click", function(){
     totallyNecessaryFunction();
 });
 
@@ -108,3 +112,8 @@ function totallyNecessaryFunction()
         document.querySelector("#motto").innerHTML =  "<h1>^^</h1>"
     }
 }
+
+ function info(item)
+ {
+     
+ }

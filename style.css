@@ -6,6 +6,7 @@ html, body
     font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 30px;
 }
 
 ::-webkit-scrollbar 
@@ -48,7 +49,7 @@ topnav
     height: 10vh;
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto 10vw;
+    grid-template-columns: repeat(3, auto);
     border-bottom: 1px solid rgb(215, 215, 215);
     transition: .2s;
     z-index: 2;
@@ -76,13 +77,14 @@ topnav
 
 #name
 {
-    font-size: 3.5vh;
+    font-size: 33px;
     white-space: nowrap;
 }
 
 #title
 {
-    font-size: 2.3vh;
+    position: absolute;
+    font-size: 22px;
     color: rgb(130,130,130);
 }
 
@@ -90,12 +92,15 @@ topnav
 {
     display: grid;
     grid-template-columns: repeat(4, auto);
+    position: absolute;
+    width: 50vw;
+    left: 30vw;
+    right: 20vw;
 }
 
 .navLinks
 {
-    font-size: 2.5vw;
-    margin-top: 1vh;
+    margin-top: 2.5vh;
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
@@ -117,8 +122,10 @@ topnav
 
 #language
 {
-    margin-top: 3vh;
-    font-size: 2vh;
+    margin-top: 3.5vh;
+    font-size: 20px;
+    position: absolute;
+    right: 2vw;
 }
 
 #pl, #en
@@ -147,7 +154,7 @@ topnav
     margin: 0 auto;
     letter-spacing: .20em;
     animation: 
-        typing 3.5s steps(50, end),
+        typing 3s steps(50, end),
         blink-caret .75s step-end infinite;
 }
 
@@ -167,7 +174,8 @@ topnav
 {
     color: rgb(30,30,30);
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1rem;
+    border-radius: 20px;
 }
 
 #icons
@@ -175,15 +183,20 @@ topnav
     padding-top: 5vh;
     padding-bottom: 5vh;
     margin-left: 25vw;
-    font-size: 2.5vw;
+    font-size: 2rem;
     width: 50vw;
     display: grid;
     grid-template-columns: repeat(8, auto);
 }
 
+#icons i:hover
+{
+    color: rgb(20, 10, 110)
+}
+
 .bigText
 {
-    font-size: 3vw;
+    font-size: 2rem;
     font-weight: 900;
     color: rgb(130,130,130);
     text-align: center;
@@ -231,8 +244,8 @@ topnav
     background: none;
     border: 1px solid rgb(230,230,230);
     color: rgb(230,230,230);
-    font-size: 2vw;
-    padding: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 .box .boxBtn:hover
@@ -244,8 +257,6 @@ topnav
 
 .box:hover img
 {
-    width: 25vw;
-    height: 100%;
     opacity: 0.3;
     filter: blur(8px);
     -webkit-filter: blur(8px);
@@ -267,11 +278,12 @@ topnav
     width: 18vw;
     border: 1px solid rgb(30,30,30);
     border-radius: 50px;
-    font-size: 1.5vw;
+    font-size: 1rem;
     color: rgb(30,30,30);
-    padding: 1vw;
+    padding: 1rem;
     margin-bottom: 6vh;  
-    background: rgba(0,0,0,0)
+    background: rgba(0,0,0,0);
+    white-space: nowrap;
 }
 
 #showMore:hover
@@ -307,7 +319,7 @@ topnav
 
 #email
 {
-    font-size: 1.5vw;
+    font-size: 1rem;
     text-align: center;
     padding-top: 10vh;
     padding-bottom: 10vh;
@@ -316,11 +328,12 @@ topnav
 #socials
 {
     padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-bottom: 15vh;
     display: grid;
     align-items: center;
     justify-content: center;
-    font-size: 1.5vw;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 
@@ -342,7 +355,7 @@ input
     border-radius: 25px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 1.5vw;
+    font-size: 0.8rem;
     color:rgb(230, 230, 230);
     transition: .2s;
 }
@@ -357,4 +370,109 @@ input
 footer
 {
     text-align: center;
+    font-size: .5rem;
+}
+
+@media only screen and (max-width: 1280px) 
+{
+    html, body
+    {
+    font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1024px) 
+{
+    html, body
+    {
+      font-size: 20px;
+    }
+
+    #icons
+    {
+        margin-left: 15vw;
+        width: 70vw;
+    }
+
+    #contactTab
+    {
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(2,auto);
+    }
+
+    #email
+    {
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+
+    #socials
+    {
+        padding-top: 0vh;
+    }
+}
+
+@media only screen and (max-width: 800px) 
+{
+    #links
+    {
+        display: none;
+    }
+
+    #projectsGrid
+    {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(6,auto);
+    }
+
+    .box
+    {
+        width: 40vw;
+    }
+
+    .box img
+    {
+        width: 40vw;
+    }
+
+    #showMore
+    {
+        position: relative;
+        left: 35vw;
+        width: 28vw;
+        border: 1px solid rgb(30,30,30);
+        border-radius: 50px;
+        font-size: 1rem;
+        color: rgb(30,30,30);
+        padding: 1rem;
+        margin-bottom: 6vh;  
+        background: rgba(0,0,0,0);
+        white-space: nowrap;
+    }
+
+    html, body
+    {
+        font-size: 18px;
+    }
+
+    #name
+    {
+        display: none;
+    }
+    
+    #title
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html, body
+    {
+        font-size: 18px;
+    }
 }
