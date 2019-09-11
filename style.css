@@ -33,7 +33,7 @@ html, body
 topnav
 {
     height: 70vh;
-    width: 100vw;;
+    max-width: 100vw;
     background: linear-gradient(rgba(20, 10, 110, 0.9), rgba(40, 10, 80, 0.9)), url("graphics/bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -41,6 +41,7 @@ topnav
     background-size: cover;
     display: block;
     color: rgb(230,230,230);
+    overflow-x: hidden;
 }
 
 #nav
@@ -53,6 +54,7 @@ topnav
     border-bottom: 1px solid rgb(215, 215, 215);
     transition: .2s;
     z-index: 2;
+    max-width: 100vw;
 }
 
 #logo-image
@@ -120,6 +122,17 @@ topnav
     border-bottom: 1px solid rgb(200, 200, 200);
 }
 
+#menu
+{
+    display: none;
+    position: absolute;
+    top: 2.5vh;
+    font-size: 2.5rem;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+}
+
 #language
 {
     margin-top: 3.5vh;
@@ -147,7 +160,7 @@ topnav
 {
     position: relative;
     left: -50%;
-    font-size: 2.5vw;
+    font-size: 1.8rem;
     overflow: hidden;
     border-right: .15em solid rgb(230,230,230);
     white-space: nowrap;
@@ -175,7 +188,8 @@ topnav
     color: rgb(30,30,30);
     text-align: center;
     font-size: 1rem;
-    border-radius: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 #icons
@@ -187,6 +201,12 @@ topnav
     width: 50vw;
     display: grid;
     grid-template-columns: repeat(8, auto);
+}
+
+#icons a
+{
+    text-decoration: none;
+    color: rgb(50,50,50);
 }
 
 #icons i:hover
@@ -202,8 +222,8 @@ topnav
     text-align: center;
     width: 100vw;
     display: block;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 7vh;
+    padding-bottom: 3vh;
 }
 
 #projectsGrid
@@ -211,6 +231,8 @@ topnav
     display: grid;
     grid-template-columns: repeat(3,auto);
     grid-template-rows: repeat(3,auto);
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 }
 
 .box
@@ -373,6 +395,17 @@ footer
     font-size: .5rem;
 }
 
+@media only screen and (max-width: 1600px) 
+{
+
+    #motto h1 
+    {
+        position: relative;
+        left: -50%;
+        font-size: 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 1280px) 
 {
     html, body
@@ -420,6 +453,24 @@ footer
     #links
     {
         display: none;
+        left: 0;
+        width: 100vw;
+        text-align: center;
+        z-index: 0;
+        font-size: 2rem;
+        color: rgb(30,30,30);
+        top: 10vh;
+        background: linear-gradient(to right, rgba(215, 215, 215, 1), rgba(240, 240, 240, 1), rgba(215, 215, 215, 1));
+    }
+
+    topnav
+    {
+        height: 10vh;
+    }
+
+    #menu
+    {
+        display: block;
     }
 
     #projectsGrid
@@ -427,6 +478,8 @@ footer
         display: grid;
         grid-template-columns: repeat(2,auto);
         grid-template-rows: repeat(6,auto);
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .box
@@ -468,6 +521,11 @@ footer
     {
         display: none;
     }
+
+    #motto h1 
+    {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -475,4 +533,36 @@ footer
     {
         font-size: 18px;
     }
+
+    #email
+    {
+        font-size: .8rem;
+    }
+
+    #showMore
+    {
+        padding: .5rem;
+        width: 40vw;
+        left: 30vw;
+    }
+
+    #icons
+    {
+        font-size: 1.75rem;
+    }
+
+    input
+    {
+        border: 1px solid rgb(200, 200, 200);
+        background-color: rgb(230, 230, 230, 0);
+        border-radius: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 0.8rem;
+        color:rgb(230, 230, 230);
+        transition: .2s;
+        max-width: 50vw;
+    }
+
 }
+

@@ -117,3 +117,22 @@ function totallyNecessaryFunction()
  {
      
  }
+
+let menu = false;
+
+ document.querySelector("#menu").addEventListener("click", function(){
+    menu = !menu;
+    if(menu)
+    {
+        document.querySelector("#links").style.display = "block";
+        document.querySelector("#nav").style.background = "linear-gradient(to right, rgba(215, 215, 215, 1), rgba(240, 240, 240, 1), rgba(215, 215, 215, 1))";
+        document.querySelector("#nav").style.color = "rgb(50,50,50)";
+    }
+        
+    else
+    {
+        document.querySelector("#links").style.display = "none";
+    }
+ });
+
+ //linear-gradient(to right, rgba(215, 215, 215, 1), rgba(240, 240, 240, 1), rgba(215, 215, 215, 1))
