@@ -175,7 +175,7 @@ topnav
 {
     padding-top: 5vh;
     padding-bottom: 5vh;
-    margin-left: 25vw;
+    margin-left: 20vw;
     font-size: 2rem;
     width: 50vw;
     display: grid;
@@ -275,8 +275,8 @@ topnav
 #showMore
 {
     position: relative;
-    left: 40vw;
-    width: 18vw;
+    left: 42vw;
+    width: 16vw;
     border: 1px solid rgb(30,30,30);
     border-radius: 50px;
     font-size: 1rem;
@@ -336,6 +336,7 @@ topnav
     justify-content: center;
     font-size: 0.8rem;
     white-space: nowrap;
+    line-height: 50%;
 }
 
 
@@ -586,25 +587,21 @@ footer
 
     #socials
     {
-        font-size: 1rem;
-        margin-top: -5vh;
-        margin-bottom: 15vh;
-        max-height: 10%;
-        height: 10%;
+        font-size: 0.8rem;
+        margin-top: -4vh;
         display: block;
         text-align: center;
     }
-
 }
 
 @media only screen and (max-height: 400px) {
 
     #email
     {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         text-align: center;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
     }
 
     #contactTab
@@ -612,6 +609,26 @@ footer
         display: grid;
         grid-template-columns: repeat(2,auto);
         grid-template-rows: repeat(1,auto);
+    }
+
+    #icons
+    {
+        width: 80vw;
+        margin-left: 5vw;
+    }
+
+    #menu
+    {
+        top: .5vh;
+        font-size: 9vh;
+    }
+
+    #language
+    {
+        margin-top: 2.5vh;
+        font-size: 4vh;
+        position: absolute;
+        right: 2vw;
     }
 
 }
