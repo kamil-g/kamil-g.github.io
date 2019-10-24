@@ -31,6 +31,7 @@ function switchLanguage(lng)
         document.querySelector("#description").innerHTML = "<p>Hello, my name is Kamil.</p><p>I live in south-eastern Poland. I love technology, creativity and self development.</p>"
         document.querySelector("#toAbout").innerHTML =  "About me"
         document.querySelector("#toProjects").innerHTML =  "My projects"
+
     }
     else if (language == "pl")
     {
@@ -49,6 +50,8 @@ function switchLanguage(lng)
         document.querySelector("#technologies").innerHTML =  "Technologie i narzędzia z których korzystam:"
         document.querySelector("#description").innerHTML = "<p>Cześć, mam na imię Kamil</p><p>Mieszkam w południowo-wschodniej części Polski. Uwielbiam technologię, twórczość i rozwój.</p>"
         document.querySelector("#toAbout").innerHTML =  "O mnie"
+        document.querySelector("#toProjects").innerHTML =  "Moje projekty"
+        document.querySelector("#emailName").innerHTML =  "Moje projekty"
         document.querySelector("#toProjects").innerHTML =  "Moje projekty"
     }
 }

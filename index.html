@@ -74,7 +74,7 @@
             </div>
             <div class="box" id="b1">
                 <img src="graphics/website1.png" alt="projectPreview">
-                <button class="boxBtn" id="bb1"  onclick="openInNewTab('https://starb0i.github.io');">Live View</button>
+                <button class="boxBtn" id="bb1"  onclick="openInNewTab('https://kapvr.github.io/');">Live View</button>
             </div>
             <div class="box" id="b2">
                 <img src="graphics/website3.png" alt="projectPreview">
@@ -112,14 +112,14 @@
         <div id="contactTab">
             <div id="email">
                 <form action="mailto:gutkamil99@gmail.com" method="post" enctype="text/plain">
-                        Name:<br>
+                        <span id="emailName">Name:</span><br>
                     <input type="text" name="name" size="50"><br>
-                        E-mail:<br>
+                        <span id="emailEmail">E-mail:</span><br>
                     <input type="text" name="mail" size="50"><br>
-                        Comment:<br>
+                        <span id="emailComment">Comment:</span><br>
                     <input type="text" name="comment" size="50"><br><br>
-                    <input class="btn" type="submit" value="Send">
-                    <input class="btn" type="reset" value="Reset">
+                    <input class="btn" id="emailSend" type="submit" value="Send">
+                    <input class="btn" id="emailReset" type="reset" value="Reset">
                 </form>   
             </div>
             <div id="socials">
