@@ -226,6 +226,7 @@ topnav
     box-shadow: 0px 0px 23px 6px rgba(171,171,171,1);
     width: 25vw;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .box img
@@ -235,6 +236,7 @@ topnav
     transition: .2s;
     opacity: 0.8;
     transform: scale(1);
+    border-radius: 10px;
 }
 
 .box .boxBtn
@@ -325,6 +327,7 @@ topnav
     text-align: center;
     padding-top: 10vh;
     padding-bottom: 10vh;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #socials
@@ -361,6 +364,10 @@ input
     font-size: 0.8rem;
     color:rgb(230, 230, 230);
     transition: .2s;
+}
+
+.btn {
+    font-family: 'Quicksand', sans-serif;
 }
 
 .btn:hover
@@ -429,8 +436,10 @@ footer
 
     #icons
     {
-        margin-left: 15vw;
+        margin-left: 10vw;
         width: 70vw;
+        max-width: 70vw;
+        margin-right: 10vw;
     }
 
     #contactTab

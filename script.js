@@ -32,6 +32,7 @@ function switchLanguage(lng)
         document.querySelector("#description").innerHTML = "<p>Hello, my name is Kamil.</p><p>I live in south-eastern Poland. I love technology, creativity and self development.</p>"
         document.querySelector("#toAbout").innerHTML =  "About me"
         document.querySelector("#toProjects").innerHTML =  "My projects"
+        document.querySelector("#emailSend").value = "Send"
 
     }
     else if (language == "pl")
@@ -55,6 +56,7 @@ function switchLanguage(lng)
         document.querySelector("#toProjects").innerHTML =  "Moje projekty"
         document.querySelector("#emailName").innerHTML =  "Moje projekty"
         document.querySelector("#toProjects").innerHTML =  "Moje projekty"
+        document.querySelector("#emailSend").value = "Wyślij"
     }
 }
 
