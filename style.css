@@ -603,6 +603,24 @@ footer
     }
 }
 
+@media only screen and (max-height: 600px) {
+
+    #contactTab {
+        height: 80vh;
+    }
+
+    footer {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    #socials {
+        margin-top: -2.5%;
+        text-align: center;
+    }
+
+}
+
 @media only screen and (max-height: 400px) {
 
     #email
